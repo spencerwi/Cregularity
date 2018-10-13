@@ -23,7 +23,7 @@ class Cregularity
   end
 
   def start_with(*args)
-    raise Regularity::Error.new("#start_with? called multiple times") unless @str.empty?
+    raise Cregularity::Error.new("#start_with? called multiple times") unless @str.empty?
     write "^%s", args
   end
 

@@ -1,2 +1,2 @@
 require "spec"
-require "../src/regularity"
+require "../src/cregularity"

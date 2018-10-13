@@ -1,5 +1,7 @@
 # Cregularity
 
+[![Build Status](https://travis-ci.org/spencerwi/Cregularity.svg?branch=master)](https://travis-ci.org/spencerwi/Cregularity)
+
 A Crystal port of [andrewberls's Regularity gem](https://github.com/andrewberls/regularity/) for Ruby.
 
 ## Installation

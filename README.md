@@ -53,4 +53,5 @@ $ crystal spec
 
 ## Contributors
 
-- [spencerwi](https://github.com/spencerwi) spencerwi - creator, maintainer
+- [spencerwi](https://github.com/spencerwi) - creator, maintainer
+- [andrewberls](https://github.com/andrewberls) - the developer of the original gem

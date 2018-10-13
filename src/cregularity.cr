@@ -54,7 +54,7 @@ class Cregularity
 
   def between(range, pattern)
     unless range.size == 2 && range.any? { |i| i.is_a?(Int) }
-      raise Regularity::Error.new("must provide an array of 2 elements, one of them must be an integer")
+      raise Cregularity::Error.new("must provide an array of 2 elements, one of them must be an integer")
     end
 
     write "%s{%s,%s}" % [interpret(pattern), range[0], range[1]]
@@ -91,7 +91,7 @@ class Cregularity
   forward_missing_to regex
 
   def to_s
-    "#<Regularity:#{object_id} regex=/#{@str}/>"
+    "#<Cregularity:#{object_id} regex=/#{@str}/>"
   end
 
   def inspect
@@ -99,7 +99,7 @@ class Cregularity
   end
 
   private def write(str, *args)
-    raise Regularity::Error.new("#end_with has already been called") if @ended
+    raise Cregularity::Error.new("#end_with has already been called") if @ended
     if args.nil? || args == Tuple.new
       @str += str
     else
@@ -133,7 +133,7 @@ class Cregularity
   # Ex: (2, "x") or (3, :digits)
   private def numbered_constraint(count, _type)
     pattern = patterned_constraint(_type)
-    raise Regularity::Error.new("Unrecognized pattern") if pattern.nil? || pattern.empty?
+    raise Cregularity::Error.new("Unrecognized pattern") if pattern.nil? || pattern.empty?
     "%s{%s}" % [pattern, count]
   end
 
